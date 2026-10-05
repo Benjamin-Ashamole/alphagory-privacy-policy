@@ -3,260 +3,320 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Terms & Conditions</title>
+  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#3A0C6E" />
+  <meta name="description" content="What AlphaGory collects, why, and how to have it deleted." />
+  <title>AlphaGory Privacy Policy</title>
+  <link rel="icon" type="image/png" href="logo.png" />
 
   <style>
+    /* The app's own tokens, from Theme.swift. */
     :root {
-      --bg: #f8fafc;
-      --card: #ffffff;
-      --text: #1f2937;
-      --muted: #6b7280;
-      --accent: #2563eb;
-      --border: #e5e7eb;
+      --ink: #F4EFFF;
+      --ink-secondary: #C3B5DE;
+      --ink-tertiary: #A594C6;
+      --gold: #D4AF37;
+      --cyan: #30CFD0;
+      --on-gold: #26083F;
+      --surface: rgba(255, 255, 255, 0.055);
+      --surface-border: rgba(255, 255, 255, 0.09);
+      --radius: 15px;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    * { box-sizing: border-box; }
 
-    * {
-      box-sizing: border-box;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
-      background: var(--bg);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-                   Roboto, Helvetica, Arial, sans-serif;
-      color: var(--text);
-      line-height: 1.7;
+      min-height: 100vh;
+      color: var(--ink);
+      font-family: "Avenir Next", Avenir, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.65;
+      /* The app's background: a deep purple fall with a cyan glow in the top-right corner. */
+      background:
+        radial-gradient(620px 620px at calc(100% + 60px) -120px, rgba(48, 207, 208, 0.32), rgba(48, 207, 208, 0) 62%),
+        linear-gradient(180deg, #3A0C6E 0%, #1B0637 46%, #110425 100%);
+      background-attachment: fixed;
+      -webkit-font-smoothing: antialiased;
     }
 
-    .container {
-      max-width: 900px;
-      margin: 48px auto;
-      padding: 48px;
-      background: var(--card);
-      border-radius: 14px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    .page {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 56px 22px 72px;
     }
 
-    h1 {
-      font-size: 1.6rem;
-      margin-top: 3rem;
-      margin-bottom: 0.75rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 1px solid var(--border);
+    /* Header */
+
+    header { text-align: center; margin-bottom: 40px; }
+
+    .logo {
+      width: 104px;
+      height: 104px;
+      display: block;
+      margin: 0 auto 18px;
     }
 
-    h1:first-of-type {
-      margin-top: 0;
-      font-size: 2.2rem;
-      border-bottom: none;
+    .wordmark {
+      margin: 0;
+      font-family: ui-rounded, "SF Pro Rounded", "Arial Rounded MT Bold", "Avenir Next", sans-serif;
+      font-weight: 900;
+      font-size: 44px;
+      line-height: 1.1;
+      letter-spacing: 0.5px;
+      text-shadow: 0 4px 0 rgba(0, 0, 0, 0.45);
+    }
+    .wordmark .alpha { color: var(--gold); }
+    .wordmark .gory { color: var(--cyan); }
+
+    .title {
+      margin: 14px 0 6px;
+      font-size: 26px;
+      font-weight: 600;
     }
 
-    p {
-      margin: 0.75rem 0;
-      color: var(--text);
+    .meta { margin: 0; color: var(--ink-tertiary); font-size: 14px; }
+
+    /* Sections */
+
+    section, .summary {
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
+      border-radius: var(--radius);
+      padding: 24px 24px 20px;
+      margin-bottom: 14px;
     }
 
-    p:first-of-type {
-      color: var(--muted);
-      font-size: 0.95rem;
+    .summary {
+      background: rgba(212, 175, 55, 0.12);
+      border-color: rgba(212, 175, 55, 0.36);
     }
 
-    ul {
-      margin: 1rem 0 1.5rem;
-      padding-left: 1.25rem;
+    h2 {
+      margin: 0 0 10px;
+      font-size: 21px;
+      font-weight: 600;
+      line-height: 1.3;
     }
 
-    li {
-      margin-bottom: 0.5rem;
+    .summary h2 { color: var(--gold); }
+
+    h3 {
+      margin: 20px 0 4px;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--cyan);
     }
 
-    a {
-      color: var(--accent);
+    p { margin: 0 0 12px; color: var(--ink-secondary); }
+    p:last-child, ul:last-child { margin-bottom: 4px; }
+
+    ul { margin: 0 0 12px; padding-left: 20px; color: var(--ink-secondary); }
+    li { margin-bottom: 7px; }
+    li::marker { color: var(--gold); }
+
+    strong { color: var(--ink); font-weight: 600; }
+
+    a { color: var(--cyan); text-underline-offset: 3px; }
+    a:hover { color: var(--ink); }
+    a:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; border-radius: 4px; }
+
+    /* Contents */
+
+    nav ol {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 6px 18px;
+      counter-reset: item;
+    }
+    nav li { margin: 0; counter-increment: item; }
+    nav li::before {
+      content: counter(item);
+      display: inline-block;
+      width: 22px;
+      color: var(--gold);
+      font-weight: 700;
+      font-size: 14px;
+    }
+    nav a { text-decoration: none; color: var(--ink-secondary); }
+    nav a:hover { color: var(--cyan); }
+
+    .contact {
+      display: inline-block;
+      margin-top: 4px;
+      padding: 13px 22px;
+      background: var(--gold);
+      color: var(--on-gold);
+      font-weight: 700;
       text-decoration: none;
-      font-weight: 500;
+      border-radius: var(--radius);
+    }
+    .contact:hover { color: var(--on-gold); filter: brightness(1.08); }
+
+    footer {
+      margin-top: 30px;
+      text-align: center;
+      color: var(--ink-tertiary);
+      font-size: 14px;
+    }
+    footer a { color: var(--ink-tertiary); }
+
+    @media (max-width: 520px) {
+      body { font-size: 16px; }
+      .page { padding: 40px 16px 56px; }
+      .wordmark { font-size: 38px; }
+      .title { font-size: 23px; }
+      section, .summary { padding: 20px 18px 16px; }
     }
 
-    a:hover {
-      text-decoration: underline;
-    }
-
-    hr {
-      border: none;
-      border-top: 1px solid var(--border);
-      margin: 3rem 0;
-    }
-
-    /* Mobile */
-    @media (max-width: 640px) {
-      .container {
-        margin: 24px 16px;
-        padding: 32px 24px;
-      }
-
-      h1 {
-        font-size: 1.4rem;
-      }
-
-      h1:first-of-type {
-        font-size: 1.8rem;
-      }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
     }
   </style>
 </head>
-
 <body>
-  <div class="container">
+  <div class="page">
 
-  <h1>Terms & Conditions</h1>
-  <p>Updated at 2025-12-18</p>
+    <header>
+      <img class="logo" src="logo.png" alt="" width="104" height="104" />
+      <p class="wordmark" aria-label="AlphaGory"><span class="alpha">Alpha</span><span class="gory">Gory</span></p>
+      <h1 class="title">Privacy Policy</h1>
+      <p class="meta">Effective 5 October 2026 · Applies to AlphaGory 2.0 and later</p>
+    </header>
 
-  <h1>General Terms</h1>
-  <p>By accessing and placing an order with AlphaGory, you confirm that you are in agreement with and bound by the terms of service contained in the Terms & Conditions outlined below. These terms apply to the entire website and any email or other type of communication between you and AlphaGory.</p>
-  <p>Under no circumstances shall AlphaGory team be liable for any direct, indirect, special, incidental or consequential damages, including, but not limited to, loss of data or profit, arising out of the use, or the inability to use, the materials on this site, even if AlphaGory team or an authorized representative has been advised of the possibility of such damages. If your use of materials from this site results in the need for servicing, repair or correction of equipment or data, you assume any costs thereof.</p>
-  <p>AlphaGory will not be responsible for any outcome that may occur during the course of usage of our resources. We reserve the rights to change prices and revise the resources usage policy in any moment. This Terms & Conditions was created with <a href="https://termify.io" target="_blank">Termify</a>.</p>
+    <div class="summary">
+      <h2>The short version</h2>
+      <ul>
+        <li>You play without an account. We never ask for your email, phone number or real name.</li>
+        <li>We store what you put into a game — the name you pick, your answers and your scores — so the people you are playing with can see them.</li>
+        <li>The app sends crash reports and basic usage statistics so we can fix problems.</li>
+        <li>No ads. We do not sell your information or track you across other apps.</li>
+        <li>You can ask us to delete your game data at any time.</li>
+      </ul>
+    </div>
 
-  <h1>License</h1>
-  <p>AlphaGory grants you a revocable, non-exclusive, non-transferable, limited license to download, install and use the app strictly in accordance with the terms of this Agreement.</p>
-  <p>These Terms & Conditions are a contract between you and AlphaGory (referred to in these Terms & Conditions as "AlphaGory", "us", "we" or "our"), the provider of the AlphaGory website and the services accessible from the AlphaGory website (which are collectively referred to in these Terms & Conditions as the "AlphaGory Service").</p>
-  <p>You are agreeing to be bound by these Terms & Conditions. If you do not agree to these Terms & Conditions, please do not use the AlphaGory Service. In these Terms & Conditions, "you" refers both to you as an individual and to the entity you represent. If you violate any of these Terms & Conditions, we reserve the right to cancel your account or block access to your account without notice.</p>
+    <section aria-label="Contents">
+      <nav>
+        <ol>
+          <li><a href="#who">Who we are</a></li>
+          <li><a href="#collect">What we collect</a></li>
+          <li><a href="#not">What we do not collect</a></li>
+          <li><a href="#use">How we use it</a></li>
+          <li><a href="#share">Who can see it</a></li>
+          <li><a href="#keep">Where it is kept, and for how long</a></li>
+          <li><a href="#choices">Your choices and rights</a></li>
+          <li><a href="#children">Children</a></li>
+          <li><a href="#changes">Changes to this policy</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ol>
+      </nav>
+    </section>
 
-  <h1>Definitions and key terms</h1>
-  <p>To help explain things as clearly as possible in this Terms & Conditions, every time any of these terms are referenced, are strictly defined as:</p>
-  <ul>
-    <li>Cookie: small amount of data generated by a website and saved by your web browser. It is used to identify your browser, provide analytics, remember information about you such as your language preference or login information.</li>
-    <li>Company: when this policy mentions “Company,” “we,” “us,” or “our,” it refers to AlphaGory, that is responsible for your information under this Terms & Conditions.</li>
-    <li>Country: where AlphaGory or the owners/founders of AlphaGory are based, in this case is </li>
-    <li>Device: any internet connected device such as a phone, tablet, computer or any other device that can be used to visit AlphaGory and use the services.</li>
-    <li>Service: refers to the service provided by AlphaGory as described in the relative terms (if available) and on this platform.</li>
-    <li>Third-party service: refers to advertisers, contest sponsors, promotional and marketing partners, and others who provide our content or whose products or services we think may interest you.</li>
-    <li>Website: AlphaGory's site, which can be accessed via this URL: </li>
-    <li>You: a person or entity that is registered with AlphaGory to use the Services.</li>
-  </ul>
+    <section id="who">
+      <h2>1. Who we are</h2>
+      <p>AlphaGory is a multiplayer word game for iPhone and iPad, made by Benjamin Ashamole (“we”, “us”). This policy explains what information the app handles when you use it. It covers the app only.</p>
+    </section>
 
-  <h1>Restrictions</h1>
-  <p>You agree not to, and you will not permit others to:</p>
-  <ul>
-  <li>License, sell, rent, lease, assign, distribute, transmit, host, outsource, disclose or otherwise commercially exploit the app or make the platform available to any third party.</li>
-  <li>Modify, make derivative works of, disassemble, decrypt, reverse compile or reverse engineer any part of the app.</li>
-  <li>Remove, alter or obscure any proprietary notice (including any notice of copyright or trademark) of AlphaGory or its affiliates, partners, suppliers or the licensors of the app.</li>
-  </ul>
-  <h1>Return and Refund Policy</h1>
-  <p>Thanks for shopping at AlphaGory. We appreciate the fact that you like to buy the stuff we build. We also want to make sure you have a rewarding experience while you’re exploring, evaluating, and purchasing our products.</p>
-  <p>As with any shopping experience, there are terms and conditions that apply to transactions at AlphaGory. We’ll be as brief as our attorneys will allow. The main thing to remember is that by placing an order or making a purchase at AlphaGory, you agree to the terms along with AlphaGory's Privacy Policy.</p>
-  <p>If, for any reason, You are not completely satisfied with any good or service that we provide, don't hesitate to contact us and we will discuss any of the issues you are going through with our product.</p>
+    <section id="collect">
+      <h2>2. What we collect</h2>
 
-  <h1>Your Suggestions</h1>
-  <p>Any feedback, comments, ideas, improvements or suggestions (collectively, "Suggestions") provided by you to AlphaGory with respect to the app shall remain the sole and exclusive property of AlphaGory.</p>
-  <p>AlphaGory shall be free to use, copy, modify, publish, or redistribute the Suggestions for any purpose and in any way without any credit or any compensation to you.</p>
+      <h3>A random account ID</h3>
+      <p>When you first open the app it signs in anonymously. This creates a random identifier for your installation, with no name, email address or password attached. It is what lets the game know which player on the table is you, and stops anyone else writing your answers. If you delete the app and install it again, you get a new one.</p>
 
-  <h1>Your Consent</h1>
-  <p>We've updated our Terms & Conditions to provide you with complete transparency into what is being set when you visit our site and how it's being used. By using our app, registering an account, or making a purchase, you hereby consent to our Terms & Conditions.</p>
+      <h3>What you put into a game</h3>
+      <ul>
+        <li><strong>The name you choose</strong> when you create or join a game. It does not need to be your real name.</li>
+        <li><strong>Your answers</strong> in each round, and the <strong>grades and scores</strong> they receive.</li>
+        <li><strong>Game details</strong>: the room code, the categories and letters played, your seat and avatar, any power-ups you hold or play, and the times at which things happened, including when the app last checked in.</li>
+      </ul>
 
-  <h1>Links to Other Websites</h1>
-  <p>This Terms & Conditions applies only to the Services. The Services may contain links to other websites not operated or controlled by AlphaGory. We are not responsible for the content, accuracy or opinions expressed in such websites, and such websites are not investigated, monitored or checked for accuracy or completeness by us. Please remember that when you use a link to go from the Services to another website, our Terms & Conditions are no longer in effect. Your browsing and interaction on any other website, including those that have a link on our platform, is subject to that website’s own rules and policies. Such third parties may use their own cookies or other methods to collect information about you.</p>
+      <h3>Crash reports</h3>
+      <p>If the app crashes, it sends a report through Firebase Crashlytics. A report contains what the app was doing when it failed, your device model, iOS version, and a random installation identifier. It does not contain your answers.</p>
 
-  <h1>Cookies</h1>
-  <p>AlphaGory uses "Cookies" to identify the areas of our website that you have visited. A Cookie is a small piece of data stored on your computer or mobile device by your web browser. We use Cookies to enhance the performance and functionality of our app but are non-essential to their use. However, without these cookies, certain functionality like videos may become unavailable or you would be required to enter your login details every time you visit the app as we would not be able to remember that you had logged in previously. Most web browsers can be set to disable the use of Cookies. However, if you disable Cookies, you may not be able to access functionality on our website correctly or at all. We never place Personally Identifiable Information in Cookies.</p>
+      <h3>Usage statistics</h3>
+      <p>The app includes Google Analytics for Firebase, which records general information about use: that the app was opened, how long a session lasted, your device model, iOS version, language, app version, and an approximate country or region worked out from your internet address. This is tied to a random app-instance identifier, not to your name.</p>
 
-  <h1>Changes To Our Terms & Conditions</h1>
-  <p>You acknowledge and agree that AlphaGory may stop (permanently or temporarily) providing the Service (or any features within the Service) to you or to users generally at  sole discretion, without prior notice to you. You may stop using the Service at any time. You do not need to specifically inform AlphaGory when you stop using the Service. You acknowledge and agree that if AlphaGory disables access to your account, you may be prevented from accessing the Service, your account details or any files or other materials which is contained in your account.</p>
-  <p>If we decide to change our Terms & Conditions, we will post those changes on this page, and/or update the Terms & Conditions modification date below.</p>
+      <h3>Device verification</h3>
+      <p>To keep automated abuse out of the game, the app uses Firebase App Check with Apple's App Attest. Your device proves to our servers that it is running a genuine copy of AlphaGory. This check does not identify you.</p>
 
-  <h1>Modifications to Our app</h1>
-  <p>AlphaGory reserves the right to modify, suspend or discontinue, temporarily or permanently, the app
-  or any service to which it connects, with or without notice and without liability to you.</p>
+      <h3>Clock check</h3>
+      <p>So that everyone's countdown ends at the same moment, the app writes a single timestamp to our servers when it starts, to measure the difference between your device's clock and ours.</p>
+    </section>
 
-  <h1>Updates to Our app</h1>
-  <p>AlphaGory may from time to time provide enhancements or improvements to the features/ functionality of the app, which may include patches, bug fixes, updates, upgrades and other modifications ("Updates").</p>
-  <p>Updates may modify or delete certain features and/or functionalities of the app. You agree that AlphaGory has no obligation to (i) provide any Updates, or (ii) continue to provide or enable any particular features and/or functionalities of the app to you.</p>
-  <p>You further agree that all Updates will be (i) deemed to constitute an integral part of the app, and (ii) subject to the terms and conditions of this Agreement.</p>
+    <section id="not">
+      <h2>3. What we do not collect</h2>
+      <ul>
+        <li>Your email address, phone number, postal address or real name.</li>
+        <li>Your contacts, photos, microphone, camera or precise location. The app never asks for these permissions.</li>
+        <li>Payment information. The app takes no payments and has no in-app purchases.</li>
+        <li>Your advertising identifier. The app shows no ads and never asks for permission to track you.</li>
+      </ul>
+    </section>
 
-  <h1>Third-Party Services</h1>
-  <p>We may display, include or make available third-party content (including data, information, applications and other products services) or provide links to third-party websites or services ("Third- Party Services").</p>
-  <p>You acknowledge and agree that AlphaGory shall not be responsible for any Third-Party Services, including their accuracy, completeness, timeliness, validity, copyright compliance, legality, decency, quality or any other aspect thereof. AlphaGory does not assume and shall not have any liability or responsibility to you or any other person or entity for any Third-Party Services.</p>
-  <p>Third-Party Services and links thereto are provided solely as a convenience to you and you access and use them entirely at your own risk and subject to such third parties' terms and conditions.</p>
+    <section id="use">
+      <h2>4. How we use it</h2>
+      <ul>
+        <li><strong>To run the game</strong>: showing each player's name, answers and scores to the others in the same room, keeping every device in step, and letting you return to a game in progress.</li>
+        <li><strong>To keep it fair and secure</strong>: making sure each player can only write their own answers, and that requests come from the real app.</li>
+        <li><strong>To fix and improve it</strong>: finding the cause of crashes and understanding in general terms how the app is used.</li>
+      </ul>
+      <p>We do not use your information for advertising, and we do not build a profile of you.</p>
+    </section>
 
-  <h1>Term and Termination</h1>
-  <p>This Agreement shall remain in effect until terminated by you or AlphaGory.</p>
-  <p>AlphaGory may, in its sole discretion, at any time and for any or no reason, suspend or terminate this Agreement with or without prior notice.</p>
-  <p>This Agreement will terminate immediately, without prior notice from AlphaGory, in the event that you fail to comply with any provision of this Agreement. You may also terminate this Agreement by deleting the app and all copies thereof from your computer.</p>
-  <p>Upon termination of this Agreement, you shall cease all use of the app and delete all copies of the app from your computer.</p>
-  <p>Termination of this Agreement will not limit any of AlphaGory's rights or remedies at law or in equity in case of breach by you (during the term of this Agreement) of any of your obligations under the present Agreement.</p>
+    <section id="share">
+      <h2>5. Who can see it</h2>
+      <h3>The people in your game</h3>
+      <p>Anyone who joins the same room sees the name you chose, your avatar, your scores, and — when they are grading your sheet or a power-up moves an answer — your answers. Only share a room code with people you want to play with, and do not put personal information in your name or answers.</p>
 
-  <h1>Copyright Infringement Notice</h1>
-  <p>If you are a copyright owner or such owner’s agent and believe any material on our app constitutes an infringement on your copyright, please contact us setting forth the following information: (a) a physical or electronic signature of the copyright owner or a person authorized to act on his behalf; (b) identification of the material that is claimed to be infringing; (c) your contact information, including your address, telephone number, and an email; (d) a statement by you that you have a good faith belief that use of the material is not authorized by the copyright owners; and (e) the a statement that the information in the notification is accurate, and, under penalty of perjury you are authorized to act on behalf of the owner.</p>
+      <h3>Our service provider</h3>
+      <p>The game runs on Google's Firebase platform (Firebase Authentication, Cloud Firestore, App Check, Crashlytics and Google Analytics for Firebase). Google stores and processes the information described above on our behalf. Google's own policy is at <a href="https://policies.google.com/privacy" rel="noopener">policies.google.com/privacy</a>.</p>
 
-  <h1>Indemnification</h1>
-  <p>You agree to indemnify and hold AlphaGory and its parents, subsidiaries, affiliates, officers, employees, agents, partners and licensors (if any) harmless from any claim or demand, including reasonable attorneys' fees, due to or arising out of your: (a) use of the app; (b) violation of this Agreement or any law or regulation; or (c) violation of any right of a third party.</p>
+      <h3>Nobody else</h3>
+      <p>We do not sell or rent your information, and we do not share it with advertisers. We would disclose information only if the law required it.</p>
+    </section>
 
-  <h1>No Warranties</h1>
-  <p>The app is provided to you "AS IS" and "AS AVAILABLE" and with all faults and defects without warranty of any kind. To the maximum extent permitted under applicable law, AlphaGory, on its own behalf and on behalf of its affiliates and its and their respective licensors and service providers, expressly disclaims all warranties, whether express, implied, statutory or otherwise, with respect to the app, including all implied warranties of merchantability, fitness for a particular purpose, title and non-infringement, and warranties that may arise out of course of dealing, course of performance, usage or trade practice. Without limitation to the foregoing, AlphaGory provides no warranty or undertaking, and makes no representation of any kind that the app will meet your requirements, achieve any intended results, be compatible or work with any other software, , systems or services, operate without interruption, meet any performance or reliability standards or be error free or that any errors or defects can or will be corrected.</p>
-  <p>Without limiting the foregoing, neither AlphaGory nor any AlphaGory's provider makes any representation or warranty of any kind, express or implied: (i) as to the operation or availability of the app, or the information, content, and materials or products included thereon; (ii) that the app will be uninterrupted or error-free; (iii) as to the accuracy, reliability, or currency of any information or content provided through the app; or (iv) that the app, its servers, the content, or e-mails sent from or on behalf of AlphaGory are free of viruses, scripts, trojan horses, worms, malware, timebombs or other harmful components.</p>
-  <p>Some jurisdictions do not allow the exclusion of or limitations on implied warranties or the limitations on the applicable statutory rights of a consumer, so some or all of the above exclusions and limitations may not apply to you.</p>
+    <section id="keep">
+      <h2>6. Where it is kept, and for how long</h2>
+      <p>Information is stored on Google's servers, which may be in the United States or other countries where Google operates.</p>
+      <p>Game data — names, answers, scores and the random account ID that goes with them — is currently kept until we delete it. Games are not removed automatically when they end. If you would like yours removed, ask us using the details below.</p>
+      <p>Crash reports and usage statistics are kept by Google for the periods set by those services, after which they are deleted or combined into totals that do not identify an installation.</p>
+    </section>
 
-  <h1>Limitation of Liability</h1>
-  <p>Notwithstanding any damages that you might incur, the entire liability of AlphaGory and any of its suppliers under any provision of this Agreement and your exclusive remedy for all of the foregoing shall be limited to the amount actually paid by you for the app.</p>
-  <p>To the maximum extent permitted by applicable law, in no event shall AlphaGory or its suppliers be liable for any special, incidental, indirect, or consequential damages whatsoever (including, but not limited to, damages for loss of profits, for loss of data or other information, for business interruption, for personal injury, for loss of privacy arising out of or in any way related to the use of or inability to use the app, third-party software and/or third-party hardware used with the app, or otherwise in connection with any provision of this Agreement), even if AlphaGory or any supplier has been advised of the possibility of such damages and even if the remedy fails of its essential purpose.</p>
-  <p>Some states/jurisdictions do not allow the exclusion or limitation of incidental or consequential damages, so the above limitation or exclusion may not apply to you.</p>
+    <section id="choices">
+      <h2>7. Your choices and rights</h2>
+      <ul>
+        <li><strong>Ask us to delete your game data.</strong> Email us with the room code, the name you played under and roughly when you played. Because you have no account with us, that is how we find the right records.</li>
+        <li><strong>Stop using the app.</strong> Deleting AlphaGory from your device ends all further collection. Game data already on our servers stays there until you ask us to remove it.</li>
+        <li><strong>Choose what you share.</strong> Your player name and answers are entirely up to you.</li>
+      </ul>
+      <p>Depending on where you live, you may have legal rights to see, correct or delete the information held about you, or to object to how it is used. To use any of them, contact us.</p>
+    </section>
 
-  <h1>Severability</h1>
-  <p>If any provision of this Agreement is held to be unenforceable or invalid, such provision will be changed and interpreted to accomplish the objectives of such provision to the greatest extent possible under applicable law and the remaining provisions will continue in full force and effect.</p>
-  <p>This Agreement, together with the Privacy Policy and any other legal notices published by AlphaGory on the Services, shall constitute the entire agreement between you and AlphaGory concerning the Services. If any provision of this Agreement is deemed invalid by a court of competent jurisdiction, the invalidity of such provision shall not affect the validity of the remaining provisions of this Agreement, which shall remain in full force and effect. No waiver of any term of this Agreement shall be deemed a further or continuing waiver of such term or any other term, and AlphaGory's failure to assert any right or provision under this Agreement shall not constitute a waiver of such right or provision. YOU AND AlphaGory AGREE THAT ANY CAUSE OF ACTION ARISING OUT OF OR RELATED TO THE SERVICES MUST COMMENCE WITHIN ONE (1) YEAR AFTER THE CAUSE OF ACTION ACCRUES. OTHERWISE, SUCH CAUSE OF ACTION IS PERMANENTLY BARRED.</p>
+    <section id="children">
+      <h2>8. Children</h2>
+      <p>AlphaGory is not directed at children under 13, and we do not knowingly collect personal information from them. The app does not ask for an age, an email address or any contact details. If you believe a child has put personal information into a game, contact us and we will delete it.</p>
+    </section>
 
-  <h1>Waiver</h1>
-  <p>Except as provided herein, the failure to exercise a right or to require performance of an obligation under this Agreement shall not effect a party's ability to exercise such right or require such performance at any time thereafter nor shall be the waiver of a breach constitute waiver of any subsequent breach.</p>
-  <p>o failure to exercise, and no delay in exercising, on the part of either party, any right or any power under this Agreement shall operate as a waiver of that right or power. Nor shall any single or partial exercise of any right or power under this Agreement preclude further exercise of that or any other right granted herein. In the event of a conflict between this Agreement and any applicable purchase or other terms, the terms of this Agreement shall govern.</p>
+    <section id="changes">
+      <h2>9. Changes to this policy</h2>
+      <p>If we change what the app collects or how we use it, we will update this page and the date at the top.</p>
+      <p><strong>What changed in version 2.0:</strong> the app now signs in anonymously, which creates the random account ID described above. Earlier versions had no sign-in of any kind.</p>
+    </section>
 
-  <h1>Amendments to this Agreement</h1>
-  <p>AlphaGory reserves the right, at its sole discretion, to modify or replace this Agreement at any time. If a revision is material we will provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.</p>
-  <p>By continuing to access or use our app after any revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, you are no longer authorized to use AlphaGory.</p>
+    <section id="contact">
+      <h2>10. Contact</h2>
+      <p>Questions, or a request to delete your data:</p>
+      <a class="contact" href="mailto:benjiashamole@gmail.com?subject=AlphaGory%20privacy">benjiashamole@gmail.com</a>
+    </section>
 
-  <h1>Entire Agreement</h1>
-  <p>The Agreement constitutes the entire agreement between you and AlphaGory regarding your use of the app and supersedes all prior and contemporaneous written or oral agreements between you and AlphaGory.</p>
-  <p>You may be subject to additional terms and conditions that apply when you use or purchase other AlphaGory's  services, which AlphaGory will provide to you at the time of such use or purchase.</p>
-
-  <h1>Updates to Our Terms</h1>
-  <p>We may change our Service and policies, and we may need to make changes to these Terms so that they accurately reflect our Service and policies. Unless otherwise required by law, we will notify you (for example, through our Service) before we make changes to these Terms and give you an opportunity to review them before they go into effect. Then, if you continue to use the Service, you will be bound by the updated Terms. If you do not want to agree to these or any updated Terms, you can delete your account.</p>
-
-  <h1>Intellectual Property</h1>
-  <p>The app and its entire contents, features and functionality (including but not limited to all information, software, text, displays, images, video and audio, and the design, selection and arrangement thereof), are owned by AlphaGory, its licensors or other providers of such material and are protected by  and international copyright, trademark, patent, trade secret and other intellectual property or proprietary rights laws. The material may not be copied, modified, reproduced, downloaded or distributed in any way, in whole or in part, without the express prior written permission of AlphaGory, unless and except as is expressly provided in these Terms & Conditions. Any unauthorized use of the material is prohibited.</p>
-
-  <h1>Agreement to Arbitrate</h1>
-  <p>This section applies to any dispute EXCEPT IT DOESN’T INCLUDE A DISPUTE RELATING TO CLAIMS FOR INJUNCTIVE OR EQUITABLE RELIEF REGARDING THE ENFORCEMENT OR VALIDITY OF YOUR OR AlphaGory's INTELLECTUAL PROPERTY RIGHTS. The term “dispute” means any dispute, action, or other controversy between you and AlphaGory concerning the Services or this agreement, whether in contract, warranty, tort, statute, regulation, ordinance, or any other legal or equitable basis. “Dispute” will be given the broadest possible meaning allowable under law.</p>
-
-  <h1>Notice of Dispute</h1>
-  <p>In the event of a dispute, you or AlphaGory must give the other a Notice of Dispute, which is a written statement that sets forth the name, address, and contact information of the party giving it, the facts giving rise to the dispute, and the relief requested. You must send any Notice of Dispute via email to: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4b292e25212a2622252a38232a2624272e0b243e3f2724242065282426">[email&#160;protected]</a>. AlphaGory will send any Notice of Dispute to you by mail to your address if we have it, or otherwise to your email address. You and AlphaGory will attempt to resolve any dispute through informal negotiation within sixty (60) days from the date the Notice of Dispute is sent. After sixty (60) days, you or AlphaGory may commence arbitration.</p>
-
-  <h1>Binding Arbitration</h1>
-  <p>If you and AlphaGory don’t resolve any dispute by informal negotiation, any other effort to resolve the dispute will be conducted exclusively by binding arbitration as described in this section. You are giving up the right to litigate (or participate in as a party or class member) all disputes in court before a judge or jury. The dispute shall be settled by binding arbitration in accordance with the commercial arbitration rules of the American Arbitration Association. Either party may seek any interim or preliminary injunctive relief from any court of competent jurisdiction, as necessary to protect the party’s rights or property pending the completion of arbitration. Any and all legal, accounting, and other costs, fees, and expenses incurred by the prevailing party shall be borne by the non-prevailing party.</p>
-
-  <h1>Submissions and Privacy</h1>
-  <p>In the event that you submit or post any ideas, creative suggestions, designs, photographs, information, advertisements, data or proposals, including ideas for new or improved products, services, features, technologies or promotions, you expressly agree that such submissions will automatically be treated as non-confidential and non-proprietary and will become the sole property of AlphaGory without any compensation or credit to you whatsoever. AlphaGory and its affiliates shall have no obligations with respect to such submissions or posts and may use the ideas contained in such submissions or posts for any purposes in any medium in perpetuity, including, but not limited to, developing, manufacturing, and marketing products and services using such ideas.</p>
-
-  <h1>Promotions</h1>
-  <p>AlphaGory may, from time to time, include contests, promotions, sweepstakes, or other activities (“Promotions”) that require you to submit material or information concerning yourself. Please note that all Promotions may be governed by separate rules that may contain certain eligibility requirements, such as restrictions as to age and geographic location. You are responsible to read all Promotions rules to determine whether or not you are eligible to participate. If you enter any Promotion, you agree to abide by and to comply with all Promotions Rules.</p>
-  <p>Additional terms and conditions may apply to purchases of goods or services on or through the Services, which terms and conditions are made a part of this Agreement by this reference.</p>
-
-  <h1>Typographical Errors</h1>
-  <p>In the event a product and/or service is listed at an incorrect price or with incorrect information due to typographical error, we shall have the right to refuse or cancel any orders placed for the product and/or service listed at the incorrect price. We shall have the right to refuse or cancel any such order whether or not the order has been confirmed and your credit card charged. If your credit card has already been charged for the purchase and your order is canceled, we shall immediately issue a credit to your credit card account or other payment account in the amount of the charge.</p>
-
-  <h1>Miscellaneous</h1>
-  <p>If for any reason a court of competent jurisdiction finds any provision or portion of these Terms & Conditions to be unenforceable, the remainder of these Terms & Conditions will continue in full force and effect. Any waiver of any provision of these Terms & Conditions will be effective only if in writing and signed by an authorized representative of AlphaGory. AlphaGory will be entitled to injunctive or other equitable relief (without the obligations of posting any bond or surety) in the event of any breach or anticipatory breach by you. AlphaGory operates and controls the AlphaGory Service from its offices in . The Service is not intended for distribution to or use by any person or entity in any jurisdiction or country where such distribution or use would be contrary to law or regulation. Accordingly, those persons who choose to access the AlphaGory Service from other locations do so on their own initiative and are solely responsible for compliance with local laws, if and to the extent local laws are applicable. These Terms & Conditions (which include and incorporate the AlphaGory Privacy Policy) contains the entire understanding, and supersedes all prior understandings, between you and AlphaGory concerning its subject matter, and cannot be changed or modified by you. The section headings used in this Agreement are for convenience only and will not be given any legal import.</p>
-
-  <h1>Disclaimer</h1>
-  <p>AlphaGory is not responsible for any content, code or any other imprecision.</p>
-  <p>AlphaGory does not provide warranties or guarantees.</p>
-  <p>In no event shall AlphaGory be liable for any special, direct, indirect, consequential, or incidental damages or any damages whatsoever, whether in an action of contract, negligence or other tort, arising out of or in connection with the use of the Service or the contents of the Service. The Company reserves the right to make additions, deletions, or modifications to the contents on the Service at any time without prior notice.</p>
-  <p>The AlphaGory Service and its contents are provided "as is" and "as available" without any warranty or representations of any kind, whether express or implied. AlphaGory is a distributor and not a publisher of the content supplied by third parties; as such, AlphaGory exercises no editorial control over such content and makes no warranty or representation as to the accuracy, reliability or currency of any information, content, service or merchandise provided through or accessible via the AlphaGory Service. Without limiting the foregoing, AlphaGory specifically disclaims all warranties and representations in any content transmitted on or in connection with the AlphaGory Service or on sites that may appear as links on the AlphaGory Service, or in the products provided as a part of, or otherwise in connection with, the AlphaGory Service, including without limitation any warranties of merchantability, fitness for a particular purpose or non-infringement of third party rights. No oral advice or written information given by AlphaGory or any of its affiliates, employees, officers, directors, agents, or the like will create a warranty. Price and availability information is subject to change without notice. Without limiting the foregoing, AlphaGory does not warrant that the AlphaGory Service will be uninterrupted, uncorrupted, timely, or error-free.</p>
-
-  <h1 id="contact-us">Contact Us</h1>
-  <p>Don't hesitate to contact us if you have any questions.</p>
-  <ul><li>Via Email:  benjiashamole@gmail.com</li>
-  </ul>  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"e62a9cf900a74843b8d7d59c0780f1ff","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+    <footer>
+      <p>© 2026 Benjamin Ashamole · <a href="terms.html">Terms &amp; Conditions</a></p>
+    </footer>
 
   </div>
 </body>
